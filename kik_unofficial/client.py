@@ -328,17 +328,17 @@ class KikClient:
         logging.info("[+] Initiating the Kik Connection thread and connecting to kik server...")
 
         # create the connection and launch the asyncio loop
-        while 1:
-            try:
-                logging.info("[!] Try before....")
-                self.connection = KikConnection(self.loop, self)
-                coro = self.loop.create_connection(lambda: self.connection, HOST, PORT, ssl=True)
-                self.loop.run_until_complete(asyncio.wait_for(coro, timeout=30))
-                logging.info("[!] Try after....")
-                break
-            except:
-                logging.info("[222!] Network Error. Try again....")
-                time.sleep(3)
+        # while 1:
+        #     try:
+        #         logging.info("[!] Try before....")
+        self.connection = KikConnection(self.loop, self)
+        coro = self.loop.create_connection(lambda: self.connection, HOST, PORT, ssl=True)
+        self.loop.run_until_complete(asyncio.wait_for(coro, timeout=30))
+            #     logging.info("[!] Try after....")
+            #     break
+            # except:
+            #     logging.info("[222!] Network Error. Try again....")
+            #     time.sleep(3)
         logging.info("[333!] Network OK....")
         logging.debug("[!] Running main loop")
         self.loop.run_forever()
