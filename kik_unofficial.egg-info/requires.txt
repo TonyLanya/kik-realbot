@@ -1,0 +1,10 @@
+pbkdf2
+rsa
+lxml
+bs4
+protobuf
+requests
+
+[dev]
+
+[test]
