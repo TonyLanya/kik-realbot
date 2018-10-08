@@ -2,3 +2,4 @@ google
 protobuf
 rsa
 lxml
+typing

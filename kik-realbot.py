@@ -17,8 +17,8 @@ from multiprocessing import Process
 from threading import Thread
 import threading
 
-username = 'rosa90i'
-password = 'asdqwe123'
+username = 'Narutohelp'
+password = 'asdfasdf'
 
 template_path = "templates.txt"
 delay_path = "delays.txt"
@@ -79,7 +79,7 @@ class EchoBot(KikClientCallback):
         self.offset = []
         self.lock = False
         self.interval = 120
-        self.client = KikClient(self, username, password, kik_node="rosa90i_bwp")
+        self.client = KikClient(self, username, password, kik_node="narutohelp_9tt")
         thread = threading.Thread(target=self.run, args=())
         thread.daemon = True
         thread.start()
