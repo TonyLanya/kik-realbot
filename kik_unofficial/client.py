@@ -333,7 +333,7 @@ class KikClient:
         #         logging.info("[!] Try before....")
         self.connection = KikConnection(self.loop, self)
         coro = self.loop.create_connection(lambda: self.connection, HOST, PORT, ssl=True)
-        self.loop.run_until_complete(asyncio.wait_for(coro, timeout=30))
+        self.loop.run_until_complete(coro)
             #     logging.info("[!] Try after....")
             #     break
             # except:
